@@ -14,6 +14,7 @@ The employed ideal gas model has the following properties:
 * The particle size is much lower than the average distance between them
 
 The temperature is calculated as:
+
 $$
 \frac{2}{2} N k_B T = \sum_{i=1}^N \frac{1}{2} m v_i^2 \longrightarrow k_b T = \sum_{i=1}^N v_i^2 / (2 N) \quad (\text{with } m = 1)
 $$
