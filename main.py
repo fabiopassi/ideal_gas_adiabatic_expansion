@@ -49,7 +49,7 @@ t_equil = 20000                                 # Number of steps for equilibrat
 t_meas_init  = 20000                            # Number of steps for initial measure
 t_expansion  = 20000                            # Number of steps for expansion
 t_meas_final = 20000                            # Number of steps for final measure
-t_sample = 20                                   # Time every which I sample
+t_sample = 15                                   # Time every which I sample
 traj = []                                       # Trajectory
 bool_wall = []
 
@@ -129,7 +129,6 @@ for k in range(1, len(maxwell_boltzmann_curve)) :
     plt.ylabel("Occurrence")
     ax.set_xlim( (0, 2*v_max) )
     ax.set_ylim((0, int(N_part/2)))
-    fig.canvas.draw()
     fig.canvas.flush_events()
 
 plt.ioff()
@@ -257,7 +256,6 @@ for k in range(1, len(traj)) :
     curr = ax.scatter(traj[k][:,0], traj[k][:,1], s=area, color="blue")
     if k < len(bool_wall) and not bool_wall[k] :
         intermediate_wall.remove()
-    fig.canvas.draw()
     fig.canvas.flush_events()
 
 plt.ioff()
